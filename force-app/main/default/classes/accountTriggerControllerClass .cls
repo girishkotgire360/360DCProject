@@ -1,5 +1,5 @@
 public with sharing class accountTriggerControllerClass {
-    
+    //Girish Kotgire
     public static void updateAccountBillingToShipping(List<Account> accTrigger){
         for(account acc : accTrigger){
             if(acc.BillingCity !=null && acc.BillingCity != acc.ShippingCity && acc.ShippingCity == null ){
