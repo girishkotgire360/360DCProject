@@ -1,0 +1,36 @@
+<template>
+    <lightning-card variant="Narrow" title="Select Object to view it's Triggers">
+        <div class="slds-p-around_xxx-small" >
+            <lightning-combobox name="objects"
+                                label=""
+                                value={selectedObject}
+                                placeholder="-Select-"
+                                options={options}
+                                onchange={handleChange} >
+            </lightning-combobox>
+        </div>
+    </lightning-card>
+
+    <template if:true={showSpinner}>
+        <lightning-spinner alternative-text="Loading"></lightning-spinner>
+    </template>
+        <template if:false={hidedatatable}>
+            <template if:true={showTable}> 
+                <lightning-card variant="Narrow" title="All Triggers">
+                            
+                        <div class="slds-box slds-var-m-left_small" style="height: 300px;">                            
+                            <lightning-datatable
+                                    key-field="Id"
+                                    data={data}
+                                    columns={columns}
+                                    onrowselection={getSelectedRows}>                                    
+                            </lightning-datatable>
+                        
+                        </div>
+                </lightning-card>
+            </template>
+        </template>
+
+
+
+</template>

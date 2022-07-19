@@ -1,0 +1,16 @@
+<template>
+    <lightning-card>
+        <div>
+            
+            <lightning-input type="number" name="input1" label="First Number" value={number1} onchange={onChangeNumber1}></lightning-input>
+            <lightning-input type="number" name="input2" label="Second Number" value={number2} onchange={onChangeNumber2}></lightning-input>
+
+            <lightning-button variant="brand" label="Sum"  onclick={addition} class="slds-m-left_x-small"></lightning-button>
+            <lightning-button variant="brand" label="Multiplication"  onclick={multiplication} class="slds-m-left_x-small"></lightning-button>
+            </br>
+            Addition: {sum} 
+            </br>
+            Multiplication: {mul}
+            </div>
+    </lightning-card>
+</template>

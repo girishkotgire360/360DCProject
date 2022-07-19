@@ -1,0 +1,13 @@
+<template>
+    <lightning-card  variant="Narrow"  title="Selected Rows:" icon-name="standard:account">
+        Question 4:
+        <div style="height: 300px;">
+            <lightning-datatable
+                    key-field="Id"
+                    data={data}
+                    show-row-number-column
+                    columns={columns}>
+            </lightning-datatable>
+        </div>  
+        </lightning-card>
+</template>
